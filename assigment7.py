@@ -1,0 +1,10 @@
+def writedata(file):
+    f= open(file,"+a")
+    rollnumber=input("enter your Rollno")
+    name=input("enter your Name")
+    class_=input("enter your class")
+    f.writelines([f"Roll No.: {rollnumber},",f" Name: {name},",f" Class: {class_}"])
+    f.seek(0)
+    print(f.readlines())
+file=input("enter file name ")
+writedata(file)
