@@ -9,4 +9,4 @@ def writedata(file="datad.txt"):
                 print (f.read())
     except FileNotFoundError as e:
         print("An error occurred",str(e))
-append_to_file()
+writedata()
