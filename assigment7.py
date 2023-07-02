@@ -1,10 +1,12 @@
-def writedata(file):
-    f= open(file,"+a")
-    rollnumber=input("enter your Rollno")
-    name=input("enter your Name")
-    class_=input("enter your class")
-    f.writelines([f"Roll No.: {rollnumber},",f" Name: {name},",f" Class: {class_}"])
-    f.seek(0)
-    print(f.readlines())
-file=input("enter file name ")
-writedata(file)
+def writedata(file="datad.txt"):
+    try:
+        with open(file,"a") as f:
+            roll_no=input("enter your roll no")
+            name=input("enter your name")
+            class_name=input("enter your class")
+            f.writelines([roll_no+ "\n",name +"\n", class_name +"\n" ])
+            with open(filr,"r") as f:
+                print (f.read())
+    except FileNotFoundError as e:
+        print("An error occurred",str(e))
+append_to_file()
